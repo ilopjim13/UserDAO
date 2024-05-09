@@ -10,7 +10,7 @@ import javax.sql.DataSource
 class UserDAOH2(
     private val dataSource: DataSource,
     private val console: IOutputInfo
-) : UserDAO {
+) : IUserDAO {
 
     override fun create(user: UserEntity): UserEntity? {
         val sql = "INSERT INTO tuser (id, name, email) VALUES (?, ?, ?)"

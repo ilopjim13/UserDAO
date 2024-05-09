@@ -3,7 +3,7 @@ package dao
 import entity.UserEntity
 import java.util.*
 
-interface UserDAO {
+interface IUserDAO {
     fun create(user: UserEntity): UserEntity?
     fun getAll(): List<UserEntity>?
     fun getById(id: UUID): UserEntity?
