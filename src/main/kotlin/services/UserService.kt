@@ -1,10 +1,10 @@
 package services
 
-import dao.UserDAO
+import dao.IUserDAO
 import entity.UserEntity
 import java.util.*
 
-class UserService(private val userDao: UserDAO) : IUserService {
+class UserService(private val userDao: IUserDAO) : IUserService {
     override fun create(user: UserEntity): UserEntity? {
         return userDao.create(user)
     }
